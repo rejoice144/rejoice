@@ -8,8 +8,16 @@
             const a2=document.getElementById("w2").value;
             const add1 = parseFloat(a1);
             const add2= parseFloat(a2);
-            const addition  = add1+add2;
-            console.log(addition);
+           
+            if (isNaN(add1) || isNaN(add2)) {
+                    alert("Please enter valid numbers for both inputs.");
+                    return; 
+                }
+
+               
+                const addition = add1 + add2;
+
+                alert("The result is: " + addition);
           }
             
     
