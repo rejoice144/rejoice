@@ -5,9 +5,15 @@
           function cw()
           {
             const w=document.getElementById("wi").value;
-            if(parseFloat(w)>15)
+            const weight = parseFloat(w);
+            if(isNaN(weight)>15)
           {
             alert("weight exceedes");
+
+          }
+          else
+          {
+            alert("no problem");
           }
           }
         
