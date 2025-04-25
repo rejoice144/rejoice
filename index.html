@@ -1,14 +1,22 @@
 <html>
     <head>
-        <title>
-            testing
-        </title>
+        <tittle>weight checking</tittle>
         <script>
-            function a(b,n)
-{
-return a+b;
-}
-console.log(a(5,4));
+          function cw()
+          {
+            const w=document.getElementById("wi").value;
+            if(parsefloat(w)>15)
+          {
+            alert("weight exceedes");
+          }
+          }
+        
         </script>
-    </head>
+        </head>
+        <body>
+            <h2>enter the weight</h2>
+            <input type="number" id="wi" placeholder="enter the weight">
+            <button onclick="cw()">check weight</button>
+        </body>
+    
 </html>
