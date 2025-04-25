@@ -6,13 +6,16 @@
           {
             const w=document.getElementById("wi").value;
             const weight = parseFloat(w);
-            if((weight)>15)
-
+            if(isNaN(weight))
+          {
+            alert("is it valid number")
+          }
+else if (weight>15)
           {
             alert("weight exceedes");
 
           }
-          else
+else 
           {
             alert("no problem");
           }
