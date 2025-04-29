@@ -3,20 +3,28 @@
     
     <head>
         <script>
+             function c()
+             {
+                let r = '';
             for( var i=0;i<=1000;i++)
         {
             if(i%3==0||i%5==0)
         {
-            console.log(i)
-           
+         r=r+i;
+          console.log(r);
+
 
         }
         }
+        document.getElementById('output').innerHTML = r;
+    }
         </script>
     </head>
     <body>
         <h1>Divisibility of 3 or 5</h1>
-        <p>Open the console to see numbers below 1000 divisible by 3 or 5.</p>
+        <button onclick="c()">divisibility</button>
+        <div id="output"></div>
+
     </body>
     </html>
 </html>
