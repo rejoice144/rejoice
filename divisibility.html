@@ -1,35 +1,30 @@
+<!DOCTYPE html>
 <html>
-    <title>divisibility of 3or 5  below 1000 natural numbers</title>
-    
-    <head>
-        <script>
-             function c()
-             {
-                var r = '';
-                var sum = 0;
-            for( var i=1;i<1000;i++)
-        {
-            if(i%3==0||i%5==0)
-        {
-         r=r+i+"<br>";
-         sum =sum+i; 
-          
-
-
-        }
-        }
-        document.getElementById('output').innerHTML = r;
-        document.getElementById('sum').innerHTML = "Sum: " + sum;
-    }
-        </script>
+<head>
+    <meta charset="UTF-8">
+    <title>Divisibility by 3 or 5 Below 1000</title>
     </head>
-    <body>
-        <h1>Divisibility of 3 or 5</h1>
-        <button onclick="c()">divisibility</button>
-        <div id="output"></div>
-        
-        <h3 id="sum"></h3> 
+    <script>
+        function calculateDivisibility() {
+            let result = '';
+            let sum = 0;
 
-    </body>
-    </html>
+            for (let i = 1; i < 1000; i++) {
+                if (i % 3 === 0 || i % 5 === 0) {
+                    result += i + "<br>";
+                    sum += i;
+                }
+            }
 
+            document.getElementById('output').innerHTML = result;
+            document.getElementById('sum').innerHTML = "Sum: " + sum;
+        }
+    </script>
+
+<body>
+    <h1>Divisibility by 3 or 5</h1>
+    <button onclick="calculateDivisibility()">Check Divisibility</button>
+    <div id="output"></div>
+    <h3 id="sum"></h3>
+</body>
+</html>
