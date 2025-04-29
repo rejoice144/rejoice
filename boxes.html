@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Sum</title>
+</head>
+<body>
+    <h1>Enter the values</h1>
+    a: <input type="number" id="a"><br>
+    b: <input type="number" id="b"><br>
+    c: <input type="number" id="c"><br>
+    <button onclick="showValues()">Submit</button>
+
+    <div id="output"></div>
+
+    <script>
+        function s(a, b, n) {
+            let sum = 0;
+            let numbers = [];
+
+            for (let i = 1; i < n; i++) {
+                if (i % a === 0 || i % b === 0) {
+                    numbers.push(i);
+                    sum += i;
+                }
+            }
+
+            return {
+                sum: sum,
+                numbers: numbers
+            };
+        }
+
+        function showValues() {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            let n = parseInt(document.getElementById('c').value);
+
+            if (isNaN(a) || isNaN(b) || isNaN(n)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+
+            let result = s(a, b, n);
+
+            document.getElementById('output').innerHTML = 
+                "Sum: " + result.sum + "<br>" + 
+                "Numbers: " + result.numbers.join(', ');
+        }
+    </script>

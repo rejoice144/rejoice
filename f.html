@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>inputs</title>
+</head>
+<body>
+
+    <h2>Enter the value</h2>
+
+    a: <input type="number" id="a"><br><br>
+    b: <input type="number" id="b"><br><br>
+    n: <input type="number" id="n"><br><br>
+
+    <button onclick="showValues()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function showValues() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let n = document.getElementById('n').value;
+
+            document.getElementById('output').innerHTML = 
+                "a = " + a + ", b = " + b + ", n = " + n;
+        }
+    </script>
+
+</body>
+</html>
