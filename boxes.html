@@ -14,18 +14,18 @@
     <script>
         function s(a, b, n) {
             let sum = 0;
-           // let numbers = [];
+            let numbers = [];
 
             for (let i = 1; i < n; i++) {
                 if (i % a === 0 || i % b === 0) {
-                   // numbers.push(i);
+                    numbers.push(i);
                     sum += i;
                 }
             }
 
             return {
                 sum: sum,
-               // numbers: numbers
+                numbers: numbers
             };
         }
 
@@ -42,9 +42,9 @@
             let result = s(a, b, n);
 
             document.getElementById('output').innerHTML = alert("Sum: " + result.sum);
-              // "Sum: " + result.sum + "<br>" + 
-              // alert("Sum: " + result.sum);
-               // "Numbers: " + result.numbers.join(', ');
+               "Sum: " + result.sum + "<br>" + 
+           
+               "Numbers: " + result.numbers.join(', ');
         }
     </script>
 </body>
