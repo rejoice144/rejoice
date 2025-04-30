@@ -6,26 +6,24 @@
     </head>
     <script>
         function caldivisi() {
-            let result = '';
+         
             let sum = 0;
 
             for (let i = 1; i < 1000; i++) {
                 if (i % 3 === 0 || i % 5 === 0) {
-                    result += i + "<br>";
+                   
                     sum += i;
                 }
             }
 
-            document.getElementById('output').innerHTML = result;
-            document.getElementById('sum').innerHTML = "Sum: " + sum;
-            alert(sum);
+          alert("sum"+sum);
         }
     </script>
 
 <body>
     <h1>Divisibility by 3 or 5</h1>
     <button onclick="caldivisi()">Check Divisibility</button>
-    <div id="output"></div>
-    <div id="sum">
+    
+ 
 </body>
 </html>
