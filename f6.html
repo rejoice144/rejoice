@@ -1,26 +1,47 @@
 
+
 <html>
+<head>
     <title>hello 1</title>
+</head>
 <body>
 
+    <h3>Enter Multiples:</h3>
+    <input type="text" id="a3" style="width: 250px;" placeholder="e.g., 3,5">
 
-    <input type="text" id="l1" style="width: 250px;" >
+    <h3>Enter Numbers:</h3>
+    <input type="text" id="l3" style="width: 250px;" placeholder="e.g., 1,2,3,4,5,6,10,15">
 
-    <button onclick="ex5()">Find Sum</button> <br>
-    <label for="rex5">Result:</label>
-    <input type="text" id="rex5" >
-        <script>
-let f6 = (multiples, numbers) => {
-    return numbers.filter( (x) => multiples.some( multiple => x % multiple === 0))
-                  .reduce( (acc, x) => acc + parseInt(x), 0);
-}
+    <br><br>
+    <button onclick="ex6()">Find Sum</button> <br><br>
 
-let ex6 = () => {
-    let multiples = document.getElementById('a3').value.split(",");
-    let numbers = document.getElementById('l3').value.split(",");
-    let sum = f6(multiples, numbers);
-    document.getElementById('rex6').value = sum;
-}
+    <label for="rex6">Result:</label>
+    <input type="text" id="rex6" readonly>
+
+    <script>
+        let f6 = (multiples, numbers) => {
+            // Convert all input strings to integers
+            let m = multiples.map(x => parseInt(x));
+            let n = numbers.map(x => parseInt(x));
+
+            return n.filter(x => m.some(mul => x % mul === 0))
+                    .reduce((acc, x) => acc + x, 0);
+        };
+
+        let ex6 = () => {
+            let multiples = document.getElementById('a3').value.split(",");
+            let numbers = document.getElementById('l3').value.split(",");
+
+            // Validate inputs
+            if (multiples.length === 0 || numbers.length === 0) {
+                alert("Please enter valid inputs.");
+                return;
+            }
+
+            let sum = f6(multiples, numbers);
+            document.getElementById('rex6').value = sum;
+        };
     </script>
-        </body>
+
+</body>
 </html>
