@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title> multiply</title>
+        <script>
+            function fou(a,b,l)
+
+            {
+                
+    let sum = 0;
+    for (let i = 0; i < l.length; i++)
+     {
+        let n = parseInt(l[i]);
+        if (n % parseInt(a) === 0 || n % parseInt(b) === 0) 
+        {
+            sum =sum+n;
+        }
+    }
+    return sum;
+}
+
+function ex4()
+{
+    let a = document.getElementById('a1').value;
+    let b = document.getElementById('b1').value;
+    let l = document.getElementById('l').value;
+
+    let sum = f4(a, b, l);
+    document.getElementById('rex4').value = sum;
+}
+        </script>
+        
+        <body>
+           
+        <input type="text" id="a1"  >
+
+        <input type="text" id="b1"  >
+
+        <input type="text" id="l"  >
+        
+        <button onclick="fou()">Find Sum</button> <br>
+        </body>
+        
+    
+</html>
