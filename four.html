@@ -1,47 +1,40 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> multiply</title>
-        <script>
-            function fou(a,b,l)
-
-            {
-                
-    let sum = 0;
-    for (let i = 0; i < l.length; i++)
-     {
-        let n = parseInt(l[i]);
-        if (n % parseInt(a) === 0 || n % parseInt(b) === 0) 
-        {
-            sum =sum+n;
+<head>
+    <title>Multiply</title>
+    <script>
+        function fou(a, b, l) {
+            let sum = 0;
+            for (let i = 0; i < l.length; i++) {
+                let n = parseInt(l[i]);
+                if (n % parseInt(a) === 0 || n % parseInt(b) === 0) {
+                    sum = sum + n;
+                }
+            }
+            return sum;
         }
-    }
-    return sum;
-}
 
-function x4()
-{
-    let a = document.getElementById('a1').value;
-    let b = document.getElementById('b1').value;
-    let l = document.getElementById('l').value.split(",");
+        function x4() {
+            let a = document.getElementById('a1').value;
+            let b = document.getElementById('b1').value;
+            let l = document.getElementById('l').value.split(",");
 
-    let sum = fou(a, b, l); 
-        alert("Sum is: " + sum);
+            let sum = fou(a, b, l); 
+            alert("Sum is: " + sum);
+        }
+    </script>
+</head>
 
-}
-        </script>
-        
-        <body>
-           <label for="a1">a:</label>
-        <input type="text" id="a1"  >
-        <label for="b1">b:</label>
-        <input type="text" id="b1"  >
-        <label for="l">l:</label>
-        <input type="text" id="l"  >
-        <label for="rex4">Result:</label>
-        <input type="text" id="rex4" readonly>
+<body>
+    <label for="a1">a:</label>
+    <input type="text" id="a1"><br>
 
-        <button onclick="x4()">Find Sum</button> <br>
-        </body>
-        
-    
+    <label for="b1">b:</label>
+    <input type="text" id="b1"><br>
+
+    <label for="l">l:</label>
+    <input type="text" id="l"><br>
+
+    <button onclick="x4()">Find Sum</button>
+</body>
 </html>
