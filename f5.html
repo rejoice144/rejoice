@@ -14,12 +14,15 @@
         <label for="rex5">Result:</label>
         <input type="text" id="rex5" >
         <script>
-let f5 = (a, l) => {
+function f5(a,l)
+{
+
     return l.filter( (x) => x % a[0] === 0 || x % a[1] === 0)
             .reduce( (acc, x) => acc + parseInt(x), 0);
 }
 
-let ex5 = () => {
+function f5()
+{
     let multiples = document.getElementById('a2').value.split(",");
     let numbers = document.getElementById('l1').value.split(",");
     if (multiples.length != 2) {
