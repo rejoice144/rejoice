@@ -22,7 +22,7 @@ function x4()
 {
     let a = document.getElementById('a1').value;
     let b = document.getElementById('b1').value;
-    let l = document.getElementById('l').value;
+    let l = document.getElementById('l').value.split(",");
 
     let sum = fou(a, b, l); 
             document.getElementById('rex4').value = sum;
