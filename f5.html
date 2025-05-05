@@ -1,0 +1,34 @@
+
+<html>
+    <title>hello </title>
+<body>
+
+
+<label for="a2">a:</label>
+        <input type="text" id="a2" style="width: 150px;" >
+
+        <label for="l1">l:</label>
+        <input type="text" id="l1" style="width: 250px;" >
+
+        <button onclick="ex5()">Find Sum</button> <br>
+        <label for="rex5">Result:</label>
+        <input type="text" id="rex5" >
+        <script>
+let f5 = (a, l) => {
+    return l.filter( (x) => x % a[0] === 0 || x % a[1] === 0)
+            .reduce( (acc, x) => acc + parseInt(x), 0);
+}
+
+let ex5 = () => {
+    let multiples = document.getElementById('a2').value.split(",");
+    let numbers = document.getElementById('l1').value.split(",");
+    if (multiples.length != 2) {
+        return;
+    }
+    // alert(f6(multiples, numbers));
+    let sum = f5(multiples, numbers);
+    document.getElementById('rex5').value = sum;
+}
+    </script>
+        </body>
+</html>
