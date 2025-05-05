@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Sum of Multiples</title>
+</head>
+<body>
+    
+
+    <script>
+        function fou(a, b, l) {
+            a = parseInt(a);
+            b = parseInt(b);
+            let sum = 0;
+
+            for (let i = 0; i < l.length; i++) {
+                let n = parseInt(l[i]);
+                if (n % a === 0 || n % b === 0) {
+                    sum =sum+n ;
+                }
+            }
+
+            return sum;
+        }
+function x4() {
+    let a = document.getElementById('a1').value;
+    let b = document.getElementById('b1').value;
+    let l = document.getElementById('l').value.split(",");
+
+    let sum = fou(a, b, l); 
+    alert("Sum is: " + sum);
+}
+</script>
+</head>
+
+<body>
+<label for="a1">a:</label>
+<input type="text" id="a1"><br>
+
+<label for="b1">b:</label>
+<input type="text" id="b1"><br>
+
+<label for="l">l:</label>
+<input type="text" id="l"><br>
+
+<button onclick="x4()">Find Sum</button>
+</body>
+</html>
