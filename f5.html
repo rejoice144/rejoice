@@ -25,10 +25,11 @@ function f5()
 {
     let multiples = document.getElementById('a2').value.split(",");
     let numbers = document.getElementById('l1').value.split(",");
-    if (multiples.length != 2) {
+    if (multiples.length != 2) 
+    {
         return;
     }
-    // alert(f6(multiples, numbers));
+    
     let sum = f5(multiples, numbers);
     document.getElementById('rex5').value = sum;
     
