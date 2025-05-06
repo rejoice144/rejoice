@@ -8,42 +8,37 @@
     <h2>Find Sum of Multiples</h2>
 
     <label for="a3">a (factors):</label>
-    <input type="text" id="a3" style="width: 250px;" placeholder="e.g., 3,5"><br><br>
+    <input type="text" id="a3" style="width: 250px;" >
 
  
     <label for="l3">l (numbers):</label>
-    <input type="text" id="l3" style="width: 250px;" placeholder="e.g., 1,2,3,4,5,6"><br><br>
+    <input type="text" id="l3" style="width: 250px;"> 
 
 
     <button onclick="ex6()">Find Sum</button><br><br>
 
-    <!-- Output result -->
     <label for="rex6">Result:</label>
     <input type="text" id="rex6" readonly>
 
     <script>
-        // Function to calculate the sum of numbers in 'l' divisible by elements in 'a'
         function f6(multiples, numbers) {
-            // Convert inputs to arrays of numbers
+           
             multiples = multiples.map(Number);
             numbers = numbers.map(Number);
 
-            // Filter and sum the valid numbers
             return numbers
                 .filter(x => multiples.some(m => x % m === 0))
                 .reduce((acc, x) => acc + x, 0);
         }
 
-        // Function triggered by the button click
+        
         function ex6() {
-            // Get input values and split them into arrays
+           
             let multiples = document.getElementById('a3').value.split(",");
             let numbers = document.getElementById('l3').value.split(",");
 
-            // Call f6 to calculate the sum
             let sum = f6(multiples, numbers);
 
-            // Display the result in the 'rex6' input field
             document.getElementById('rex6').value = sum;
         }
     </script>
