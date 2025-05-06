@@ -3,37 +3,35 @@
     <title>hello </title>
 <body>
 
-
 <label for="a2">a:</label>
-        <input type="text" id="a2" style="width: 150px;" >
+<input type="text" id="a2" style="width: 150px;" placeholder="e.g. 3,5">
 
-        <label for="l1">l:</label>
-        <input type="text" id="l1" style="width: 250px;" >
+<label for="l1">l:</label>
+<input type="text" id="l1" style="width: 250px;" placeholder="e.g. 1,2,3,4,5,6,7,8,9">
 
-        <button onclick="ex5()">Find Sum</button> <br>
-        <label for="rex5">Result:</label>
-        <input type="text" id="rex5" >
-        <script>
-function f5(a,l)
-{
+<button onclick="ex5()">Find Sum</button> <br>
+<label for="rex5">Result:</label>
+<input type="text" id="rex5" readonly>
 
-    return l.filter( (x) => x % a[0] === 0 || x % a[1] === 0)
-            .reduce( (acc, x) => acc + parseInt(x), 0);
+<script>
+function findSum(multiples, numbers) {
+    return numbers
+        .filter(x => x % multiples[0] === 0 || x % multiples[1] === 0)
+        .reduce((acc, x) => acc + parseInt(x), 0);
 }
 
-function f5()
-{
-    let multiples = document.getElementById('a2').value.split(",");
-    let numbers = document.getElementById('l1').value.split(",");
-    if (multiples.length != 2) 
-    {
+function ex5() {
+    let multiples = document.getElementById('a2').value.split(",").map(Number);
+    let numbers = document.getElementById('l1').value.split(",").map(Number);
+    
+    if (multiples.length !== 2 || numbers.length === 0) {
+        alert("Please enter valid values.");
         return;
     }
     
-    let sum = f5(multiples, numbers);
+    let sum = findSum(multiples, numbers);
     document.getElementById('rex5').value = sum;
-    
 }
-    </script>
-        </body>
+</script>
+</body>
 </html>
