@@ -35,7 +35,7 @@ let price=document.getElementById("p1").value;
         let basketobj = JSON.parse(basket);
         let priceobj = JSON.parse(price);
                 let cost = f7(basketobj, priceobj);
-        document.getElementById("result").innerText = "Cost: $"+ cost.toFixed(2);
+        document.getElementById("result").innerText = "Cost: $";
     } else
      {
         document.getElementById("result").innerText = "Please enter both basket and prices.";
