@@ -28,13 +28,13 @@ return cost;
             function calculate()
             {
             
-let basket= document.getElementById(b1).value;
-let price=document.getElementById(p1).value;
+let basket= document.getElementById("b1").value;
+let price=document.getElementById("p1").value;
  if (basket && price) 
  {
-        let basket = JSON.parse(b);
-        let price = JSON.parse(p);
-                let cost = f7(basket, prices);
+        let basketobj = JSON.parse(basket);
+        let priceobj = JSON.parse(price);
+                let cost = f7(basketobj, priceobj);
         document.getElementById("result").innerText = " cost.toFixed(2)";
     } else
      {
