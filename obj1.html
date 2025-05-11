@@ -7,7 +7,7 @@
         <input type="text" id="b1" >{"apple": 2, "banana": 3}<br>
         <label>price</label>
         <input type="text" id="p1" >{"apple": o.7, "banana": 1.6}<br>
-        <button onclick="f7()"></button>
+        <button onclick="cc()"></button>
         <h2 id="result">cost: $0.00</h2>
 
 
@@ -30,10 +30,10 @@ return cost;
             
 let b= document.getElementByID(b1).value;
 let p=document.getElementByID(p1).value;
- if (basketText && pricesText) 
+ if (b && p) 
  {
-        let basket = JSON.parse(basketText);
-        let prices = JSON.parse(pricesText);
+        let basket = JSON.parse(b);
+        let price = JSON.parse(p);
                 let cost = f7(basket, prices);
         document.getElementById("result").innerText = "cost: $" ;
     } else
