@@ -34,7 +34,7 @@ let p=document.getElementByID(p1).value;
  {
         let basket = JSON.parse(basketText);
         let prices = JSON.parse(pricesText);
-                let total = f7(basket, prices);
+                let cost = f7(basket, prices);
         document.getElementById("result").innerText = "Total: $" + total.toFixed(2);
     } else
      {
